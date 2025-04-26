@@ -139,4 +139,10 @@ export const GlobalStyle = createGlobalStyle`
         font-style: italic;
     }
 
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
 `

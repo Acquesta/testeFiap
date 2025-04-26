@@ -1,14 +1,16 @@
 "use client"
 
 import styled from "styled-components";
-import { fontes } from "@/styles/fontes";
+import { cores } from "@/styles/cores";
 
+interface HotbarProps {
+    children: object
+}
 
-export const hotbar = styled.div`
-    width:50vw;
-`
-
-export const teste = styled.h1`
-    font-family: ${ fontes.tipografia.gotham };
-    font-weight:600;
+export const hotbar = styled.div<HotbarProps>`
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ${ cores.CHINESE_BLACK }
 `
