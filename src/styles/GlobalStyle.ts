@@ -3,7 +3,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-    /* Fontes Gotham - vários pesos */
+    /* Fontes Gotham */
     @font-face {
         font-family: 'Gotham';
         src: url('/fonts/Gotham/GothamHTF-Thin.otf') format('opentype');

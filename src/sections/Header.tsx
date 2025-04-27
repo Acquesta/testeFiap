@@ -10,7 +10,7 @@ interface widthBar {
     width: number
 }
 
-const Img = styled.img`
+const Logo = styled.img`
     width: 103px;
     min-height: 30px;
     padding: 25px 0;
@@ -18,33 +18,41 @@ const Img = styled.img`
 
 const Barra = styled.div<widthBar>`
     height:3px;
-    width: ${({width}) => width + '%' };
+    width: ${({width}) => (width ?? 0) + '%' };
     background-color: ${ cores.MAGENTA };
+    transition: width 0.3s ease-out;
+`
+const DivHeader = styled.div`
+    position: fixed;
+    top: 0;
+    z-index: 10;
 `
 
 function Header() {
 
     const [scrollProgress, setScrollProgress] = useState(0);
-
     useEffect(() => {
-      const handleScroll = () => {
-        const scrollTop = window.scrollY;
-        const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = (scrollTop / windowHeight) * 100;
-        setScrollProgress(progress);
-      };
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / windowHeight) * 100;
+            setScrollProgress(progress);
+        };
   
       window.addEventListener('scroll', handleScroll);
       return () => window.removeEventListener('scroll', handleScroll);
     }, []); 
 
+
     return ( 
-        <div style={{position: 'fixed'}}>
+        <DivHeader>
             <HotBar>
-                <Img src={logo.src}></Img>
-            </HotBar>
-            <Barra width={scrollProgress}/>
-        </div>
+                <Logo src={logo.src}></Logo>
+            </HotBar> 
+            <Barra 
+                width={scrollProgress}  
+            />
+        </DivHeader>
      );
 }
 

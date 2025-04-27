@@ -5,5 +5,6 @@ export const cores = {
     PALTEL_BLUE: "#ACC1CC",
     CULTURED: "#F5F5F5",
     SPANISH: "#006BB7",
-    SILVER_FOIL: "#AFAFAF"
+    SILVER_FOIL: "#AFAFAF",
+    DAVYS_GREY: "#555555"
 }
