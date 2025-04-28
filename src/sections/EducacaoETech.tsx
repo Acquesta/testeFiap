@@ -47,7 +47,7 @@ const DivConteudo = styled.div`
 function EducacaoETech() {
     return ( 
 
-        <SectionEducacaoETech>
+        <SectionEducacaoETech id="#Capa">
             <Titulo color={cores.CHINESE_BLACK} tipografia={fontes.tipografia.gotham} stroke='false'>
                 Educação e Tech
             </Titulo>

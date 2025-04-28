@@ -6,6 +6,7 @@ import { fontes } from "@/styles/fontes";
 import styled from "styled-components";
 import fundoCapa from '@/assets/imgs/header.jpg'
 import Paragrafo from "@/components/Paragrafo";
+import BotaoDesceSecao from "@/components/BotaoDesceSecao";
 
 interface FundoCapaProps {
     background: string
@@ -20,7 +21,7 @@ const SectionCapa = styled.section<SectionCapaProps>`
     background-color: ${cores.BLACK};
 
     @media (min-width: 413px) {
-        padding: 179px 129px;
+        padding: 179px 129px 0 129px;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -76,6 +77,11 @@ function Capa() {
                 Referência em tecnologia e inovação no Brasil, a FIAP é uma faculdade que prepara profissionais para o futuro, com um ensino prático, professores atuantes no mercado e desafios reais que conectam os alunos às grandes empresas. 
                 </Paragrafo>
             </ParagrafoDiv>
+
+            <BotaoDesceSecao>
+
+            </BotaoDesceSecao>
+
         </SectionCapa>
      );
 }

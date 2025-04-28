@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 const SectionQuerSaeberMais = styled.section`
     background-color: ${cores.BLACK};
+    margin-top: -2px;
     padding: 100px 24px;
     text-align: center;
 `

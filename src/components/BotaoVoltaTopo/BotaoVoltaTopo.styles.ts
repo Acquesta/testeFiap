@@ -15,4 +15,9 @@ export const ButtonVoltaTopo = styled.button<{ $visivel: boolean }>`
   pointer-events: ${(props) => (props.$visivel ? 'auto' : 'none')};
   transition: opacity 0.3s ease;
   z-index: 10;
+
+  @media screen {
+    bottom: 91px;
+    right: 91px;
+  }
 `;
