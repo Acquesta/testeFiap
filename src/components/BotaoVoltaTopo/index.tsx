@@ -2,36 +2,32 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ButtonVoltaTopo } from "./BotaoVoltaTopo.styles";
+import * as B from "./BotaoVoltaTopo.styles";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import scrollUp from "@/assets/svg/scroll-up-arrow.svg"
 
 gsap.registerPlugin(ScrollToPlugin);
 
-function ScrollTopButton(){
+function BotaoVoltaTopo(){
   const [isVisible, setIsVisible] = useState(false);
 
-  function handleScroll() {
+  function scroll() {
     const scrollTop = window.scrollY;
-    const viewportHeight = window.innerHeight;
-    setIsVisible(scrollTop > viewportHeight);
+    const tamanhoTela = window.innerHeight;
+    setIsVisible(scrollTop > tamanhoTela);
   };
 
   function scrollToTop() {
     gsap.to(window, { duration: 1, scrollTo: { y: 0 }, ease: "power2.out" });
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
-    <ButtonVoltaTopo $visivel={isVisible} onClick={scrollToTop}>
+    <B.Button $visivel={isVisible} onClick={scrollToTop}>
       <img src={scrollUp.src} alt="" />
-    </ButtonVoltaTopo>
+    </B.Button>
   );
 };
 
-export default ScrollTopButton;
+export default BotaoVoltaTopo;

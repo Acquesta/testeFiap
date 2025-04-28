@@ -1,4 +1,4 @@
-import * as style from './Hotbar.styles'
+import * as H from './Hotbar.styles'
 
 interface HotbarProps {
     children: object
@@ -6,9 +6,9 @@ interface HotbarProps {
 
 function HotBar({ children } : HotbarProps) {
     return ( 
-        <style.hotbar>
+        <H.hotbar>
             { children }
-        </style.hotbar>
+        </H.hotbar>
      );
 }
 

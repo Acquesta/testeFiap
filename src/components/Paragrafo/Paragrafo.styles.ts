@@ -2,7 +2,7 @@ import { fontes } from "@/styles/fontes";
 import styled from "styled-components";
 import { ParagrafoProps } from "./index";
 
-export const ParagrafoP = styled.p<ParagrafoProps>`
+export const Paragrafo = styled.p<ParagrafoProps>`
     color: ${({color}) => color};
     font-size: ${fontes.tamanho.mobile.paragrafos};
     font-family: ${fontes.tipografia.gotham};

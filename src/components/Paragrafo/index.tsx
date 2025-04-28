@@ -1,4 +1,4 @@
-import { ParagrafoP } from "./Paragrafo.styles";
+import * as P from "./Paragrafo.styles";
 
 export interface ParagrafoProps {
     children: string,
@@ -8,9 +8,9 @@ export interface ParagrafoProps {
 
 function Paragrafo({ children, color, id } : ParagrafoProps) {
     return ( 
-        <ParagrafoP id={id} color={color}>
+        <P.Paragrafo id={id} color={color}>
             {children}
-        </ParagrafoP>
+        </P.Paragrafo>
      );
 }
 

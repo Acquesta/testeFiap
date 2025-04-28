@@ -1,7 +1,7 @@
 import { cores } from "@/styles/cores";
 import styled from "styled-components";
 
-export const ButtonVoltaTopo = styled.button<{ $visivel: boolean }>`
+export const Button = styled.button<{ $visivel: boolean }>`
   position: fixed;
   bottom: 24px;
   right: 24px;

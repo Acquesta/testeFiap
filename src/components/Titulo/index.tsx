@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react";
-import { TituloPrincipal } from "./Titulo.styles";
+import * as T from "./Titulo.styles";
 
 export interface TituloProps{
     children: string,
@@ -13,9 +13,9 @@ export interface TituloProps{
 
 function Titulo({ children, color, tipografia, stroke, id } : TituloProps) {
     return ( 
-        <TituloPrincipal id={id} color={ color } tipografia={ tipografia } stroke={stroke == 'true' ? 'true' : 'false'}>
+        <T.Titulo id={id} color={ color } tipografia={ tipografia } stroke={stroke == 'true' ? 'true' : 'false'}>
             { children }
-        </TituloPrincipal>
+        </T.Titulo>
      );
 }
 

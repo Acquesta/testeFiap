@@ -73,9 +73,6 @@ const ParagrafoDiv = styled.div`
 `
 
 function Capa() {
-
-    const boxRef = useRef<HTMLDivElement>(null);
-
     useGSAP(() => {
         gsap.fromTo("#animacaoCapa", {
             x: -100,           

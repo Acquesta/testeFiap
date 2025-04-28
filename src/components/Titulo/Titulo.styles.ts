@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { TituloProps } from "./index";
 import { fontes } from "@/styles/fontes";
 
-export const TituloPrincipal = styled.h2<TituloProps>`
+export const Titulo = styled.h2<TituloProps>`
     color: ${ ({stroke, color}) => stroke == 'true' ? 'transparent' : color };
     text-transform: uppercase; 
     font-family: ${({tipografia}) => tipografia};

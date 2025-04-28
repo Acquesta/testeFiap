@@ -1,4 +1,4 @@
-import { BotaoDesce, DivBotao, LegendaBotao } from "./BotaoDesceSecao.styles";
+import * as B from "./BotaoDesceSecao.styles";
 import Svgbotao from "@/assets/svg/scroll-down-arrow.svg"
 
 import gsap from "gsap";
@@ -21,14 +21,14 @@ function BotaoDesceSecao({ id } : BotaoDesceSecaoProps){
       };
 
     return(
-        <DivBotao id={id}>
-            <LegendaBotao>
+        <B.DivBotao id={id}>
+            <B.LegendaBotao>
                 Srcoll down
-            </LegendaBotao>
-            <BotaoDesce onClick={() => desceSecao("Capa")}>
+            </B.LegendaBotao>
+            <B.BotaoDesce onClick={() => desceSecao("Capa")}>
                 <img src={Svgbotao.src}></img>
-            </BotaoDesce>    
-        </DivBotao>
+            </B.BotaoDesce>    
+        </B.DivBotao>
     )
 }
 
