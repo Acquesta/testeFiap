@@ -7,7 +7,7 @@ interface ButtonProps{
 
 export const DivBotao = styled.div<ButtonProps>`
     display: none;
-    margin: 77px auto 85px auto;
+    margin:0 auto 0 auto;
     
     @media (min-width: 720px) {
         display: flex;

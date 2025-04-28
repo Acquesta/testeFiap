@@ -1,5 +1,8 @@
 import { ButtonBotao } from "./Botao.styles";
-import { BotaoProps } from "./Botao.types";
+
+interface BotaoProps{
+    children: string
+}
 
 function Botao({ children } : BotaoProps) {
     return ( 

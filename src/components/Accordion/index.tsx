@@ -28,7 +28,7 @@ const items: AccordionItem[] = [
   },
 ];
 
-export default function Accordion() {
+function Accordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {
@@ -57,3 +57,5 @@ export default function Accordion() {
     </A.ContainerAccordion>
   );
 }
+
+export default Accordion;

@@ -8,6 +8,8 @@ import Header from "@/sections/Header";
 import NossaEstrutura from "@/sections/NossaEstrutura";
 import QuerSaberMais from "@/sections/QuerSaberMais";
 import { GlobalStyle } from "@/styles/GlobalStyle";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 import localFont from 'next/font/local'
 
@@ -46,6 +48,13 @@ const roboto = localFont({
 });
 
 export default function Home() {
+
+  useGSAP(() => {
+    gsap.to(window, {
+      scrollTo: 0
+    })
+  })
+
   return (
     <main className={`${gotham.className}, ${roboto.className}`}>
       <GlobalStyle />

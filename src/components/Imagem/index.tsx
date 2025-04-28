@@ -4,6 +4,12 @@ import { useState } from "react";
 import * as I from './Imagem.styles'
 import botaoFehar from '@/assets/svg/btn-fechar.svg'
 
+interface ImagemProps {
+    src: string;
+    alt: string;
+    legenda: string;
+  }
+
 function Imagem({ src, alt, legenda }: ImagemProps) {
   const [ativo, setAtivo] = useState(false);
 

@@ -16,7 +16,7 @@ export const ButtonVoltaTopo = styled.button<{ $visivel: boolean }>`
   transition: opacity 0.3s ease;
   z-index: 10;
 
-  @media screen {
+  @media (min-width: 413px) {
     bottom: 91px;
     right: 91px;
   }

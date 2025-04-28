@@ -1,9 +1,14 @@
 import { ParagrafoP } from "./Paragrafo.styles";
-import { ParagrafoProps } from "./Paragrafo.types";
 
-function Paragrafo({ children, color } : ParagrafoProps) {
+export interface ParagrafoProps {
+    children: string,
+    color: string,
+    id?: string
+}
+
+function Paragrafo({ children, color, id } : ParagrafoProps) {
     return ( 
-        <ParagrafoP color={color}>
+        <ParagrafoP id={id} color={color}>
             {children}
         </ParagrafoP>
      );

@@ -1,6 +1,6 @@
 import { cores } from "@/styles/cores"
-import * as S from "./SubLista.types"
 import { fontes } from "@/styles/fontes"
+import * as S from "./SubLista.types"
 
 function SubLista() {
     return (

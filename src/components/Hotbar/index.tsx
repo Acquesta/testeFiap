@@ -1,5 +1,8 @@
 import * as style from './Hotbar.styles'
-import { HotbarProps } from './Hotbar.types';
+
+interface HotbarProps {
+    children: object
+}
 
 function HotBar({ children } : HotbarProps) {
     return ( 

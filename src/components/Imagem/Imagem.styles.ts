@@ -1,6 +1,8 @@
 import { cores } from "@/styles/cores";
 import { fontes } from "@/styles/fontes";
+
 import styled from "styled-components";
+
 import cursorAbrir from "@/assets/svg/cursor-open.svg"
 import cursorFechar from "@/assets/svg/cursor-close.svg"
 

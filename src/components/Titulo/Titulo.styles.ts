@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TituloProps } from "./Titulo.types";
+import { TituloProps } from "./index";
 import { fontes } from "@/styles/fontes";
 
 export const TituloPrincipal = styled.h2<TituloProps>`

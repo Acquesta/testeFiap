@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { ParagrafoProps } from "./Paragrafo.types";
 import { fontes } from "@/styles/fontes";
+import styled from "styled-components";
+import { ParagrafoProps } from "./index";
 
 export const ParagrafoP = styled.p<ParagrafoProps>`
     color: ${({color}) => color};
