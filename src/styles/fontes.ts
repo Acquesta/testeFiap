@@ -24,6 +24,6 @@ export const fontes = {
     },
     tipografia:{
         gotham: 'Gotham',
-        roboto: 'Roboto'
+        roboto: ''
     }
 }

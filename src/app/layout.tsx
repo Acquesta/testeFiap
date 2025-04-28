@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "FIAP",
-  description: "A maior faculdade de tecnologia"
+  description: "A maior faculdade de tecnologia",
+   
 };
 
 export default function RootLayout({
