@@ -5,9 +5,10 @@ import { fontes } from "@/styles/fontes";
 import styled from "styled-components";
 
 const SectionQuerSaeberMais = styled.section`
+    height: 60vh;
     background-color: ${cores.BLACK};
     margin-top: -2px;
-    padding: 100px 24px;
+    padding: 150px 24px;
     text-align: center;
 `
 

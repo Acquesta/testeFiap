@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import gsap from "gsap";
 import * as A from './Accordion.styles';
 import BotaoAccordion from "../BotaoAccordion";
 
@@ -32,7 +33,49 @@ function Accordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    const currentId = `#animacaoAccordion${index}`;
+    const previousId = openIndex !== null ? `#animacaoAccordion${openIndex}` : null;
+
+    if (openIndex === index) {
+      // Fecha o item atual
+      gsap.to(currentId, {
+        height: 0,
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.inOut",
+        margin: "0",
+      });
+      setOpenIndex(null);
+    } else {
+      // Fecha o item anterior
+      if (previousId) {
+        gsap.to(previousId, {
+          height: 0,
+          opacity: 0,
+          duration: 0.5,
+          ease: "power2.inOut",
+          margin: "0",
+        });
+      }
+
+      // Abre o novo item
+      const element = document.getElementById(`animacaoAccordion${index}`);
+      if (element) {
+        element.style.height = "0px";
+        const height = element.scrollHeight;
+        element.style.height = "0px";
+
+        gsap.to(currentId, {
+          height: height,
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.inOut",
+          margin: "40px 0 ",
+        });
+      }
+
+      setOpenIndex(index);
+    }
   };
 
   return (
@@ -48,7 +91,7 @@ function Accordion() {
                 <BotaoAccordion isOpen={isOpen} />
               </A.Icon>
             </A.Title>
-            <A.Content $aberto={isOpen}>
+            <A.Content id={`animacaoAccordion${index}`}>
               {item.content}
             </A.Content>
           </A.Item>
