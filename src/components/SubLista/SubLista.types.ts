@@ -3,12 +3,11 @@ import { fontes } from "@/styles/fontes";
 import styled from "styled-components";
 
 interface ItemProps{
-    color: string;
     icone: string;
     tamanho: string;
 }
 
-export const Lista = styled.ul`
+export const SubLista = styled.ul`
   list-style: none; 
   padding: 0;
   display: flex;
@@ -19,7 +18,7 @@ export const Lista = styled.ul`
 export const Item = styled.ul<ItemProps>`
   position: relative;
   padding-left: 20px;
-  color: ${({color}) => color};
+  color: ${cores.MAGENTA};
   font-family: ${fontes.tipografia.gotham};
   font-size: ${({tamanho}) => tamanho};
   line-height: 20px;
@@ -35,6 +34,6 @@ export const Item = styled.ul<ItemProps>`
   }
 
     @media (min-width: 413px) {
-        font-size: ${fontes.tamanho.desktop.listas}
+        font-size: ${fontes.tamanho.desktop.subListas}
     }
 `;

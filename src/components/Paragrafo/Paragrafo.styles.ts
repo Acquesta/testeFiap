@@ -9,4 +9,14 @@ export const ParagrafoP = styled.p<ParagrafoProps>`
     line-height: 20px;
     font-weight: 300;
     letter-spacing: 0%;
+
+    @media (min-width: 413px) {
+        font-size: ${fontes.tamanho.desktop.paragrafos};
+        width: 100%;
+        text-align: justify;
+    }
+
+    @media (max-width: 720px) {
+        font-size: ${fontes.tamanho.desktop.paragrafos};
+    }
 `

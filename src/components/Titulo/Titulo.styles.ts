@@ -9,4 +9,8 @@ export const TituloPrincipal = styled.h2<TituloProps>`
     -webkit-text-stroke: 1.6px ${({color, stroke}) => stroke == 'true' ? color : 'transparent'};
     font-size: ${fontes.tamanho.mobile.titulo};
     font-weight: 500;
+
+    @media (min-width: 720px) {
+        font-size: ${fontes.tamanho.desktop.titulo};
+    }
 `

@@ -11,28 +11,58 @@ interface FundoCapaProps {
     background: string
 }
 
-const DivCapa = styled.section`
+interface SectionCapaProps {
+    background: string
+}
+
+const SectionCapa = styled.section<SectionCapaProps>`
     margin-top: 80px;
+    background-color: ${cores.BLACK};
+
+    @media (min-width: 413px) {
+        padding: 179px 129px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap:20px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 80%),
+        linear-gradient(to top, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0) 80%),
+        url(${({background}) => background});
+        background-position: center;
+        background-size: cover;
+    }
 `
 
 const FundoCapa = styled.div<FundoCapaProps>`
+    background-position: center;
+    background-size: cover;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 80%),
     linear-gradient(to top, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0) 80%),
     url(${({background}) => background});
-    background-position: center;
-    background-size: cover;
     padding: 67px 24px;
+
+    @media (min-width: 413px) {
+        background: none;
+        padding: 0;
+    }
 `
 
 const ParagrafoDiv = styled.div`
-    background-color: ${cores.BLACK};
     padding: 30px 24px;
+
+    @media (min-width: 413px) {
+        background: none;
+        width: 60vw;
+        padding: 0;
+    }
+
 `
 
 function Capa() {
 
     return ( 
-        <DivCapa>
+        <SectionCapa background={fundoCapa.src}>
             <FundoCapa background={fundoCapa.src}>
                 <Titulo color={cores.MAGENTA} tipografia={fontes.tipografia.gotham} stroke={'true'}>
                     A maior faculdade
@@ -46,7 +76,7 @@ function Capa() {
                 Referência em tecnologia e inovação no Brasil, a FIAP é uma faculdade que prepara profissionais para o futuro, com um ensino prático, professores atuantes no mercado e desafios reais que conectam os alunos às grandes empresas. 
                 </Paragrafo>
             </ParagrafoDiv>
-        </DivCapa>
+        </SectionCapa>
      );
 }
 

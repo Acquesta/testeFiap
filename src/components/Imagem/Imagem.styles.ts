@@ -1,11 +1,12 @@
 import { cores } from "@/styles/cores";
 import { fontes } from "@/styles/fontes";
-import { style } from "framer-motion/client";
 import styled from "styled-components";
+import cursorAbrir from "@/assets/svg/cursor-open.svg"
+import cursorFechar from "@/assets/svg/cursor-close.svg"
 
 export const Thumbnail = styled.img`
   width: 100%; 
-  cursor: pointer;
+  cursor: url(${cursorAbrir.src}), auto;
   transition: transform 0.2s;
 `;
 
@@ -15,7 +16,7 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color:rgba(68, 68, 68, 0.9); /* fundo cinza escuro */
+  background-color:rgba(68, 68, 68, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +26,11 @@ export const Overlay = styled.div`
 export const Modal = styled.div`
   position: relative;
   width: 100%;
+  cursor: url(${cursorFechar.src}), auto;
+
+  @media (min-width: 413px) {
+    width: 70%;
+  }
 `;
 
 export const ModalImagem = styled.img`
@@ -52,6 +58,10 @@ export const legendaImagem = styled.p`
     line-height: 24px;
     font-weight: 400;
     color: ${cores.DAVYS_GREY};
+
+    @media (min-width: 413px) {
+      font-size: ${fontes.tamanho.desktop.legendas};
+    }
 `;
 
 export const DivImagem = styled.div`

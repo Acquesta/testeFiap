@@ -20,7 +20,7 @@ function Imagem({ src, alt, legenda }: ImagemProps) {
                 <I.BotaoFechar onClick={() => setAtivo(false)}>
                     <img src={botaoFehar.src} alt="" />
                 </I.BotaoFechar>
-                <I.Modal>
+                <I.Modal  onClick={() => setAtivo(false)}>
                     <I.ModalImagem src={src} alt={alt} />
                 </I.Modal>
             </I.Overlay>
