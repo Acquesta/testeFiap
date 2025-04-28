@@ -5,11 +5,17 @@ import { fontes } from "@/styles/fontes";
 export const ContainerAccordion = styled.div`
   width: 100%;
   margin-top:70px;
-  border-top: 2px solid ${cores.DAVYS_GREY};
+
+  @media (min-width: 720px) {
+    padding: 0 115px;
+  }
+
 `;
 
 export const Item = styled.div`
+  margin-top: -2px;
   border-bottom: 2px solid ${cores.DAVYS_GREY};
+  border-top: 2px solid ${cores.DAVYS_GREY};
 `;
 
 export const Title = styled.div`
@@ -32,10 +38,14 @@ export const Content = styled.div<{ $aberto: boolean }>`
     margin-bottom: ${({ $aberto }) => ($aberto ? "20px " : "0 ")};
     font-family: ${fontes.tipografia.gotham};
     color: ${cores.SILVER_FOIL};
-    font-size: 16px;
+    font-size: ${fontes.tamanho.mobile.subListas};
     font-weight: 400;
     line-height: 20px;
     text-align: justify;
+
+    @media  (min-width: 720px) {
+     font-size: ${fontes.tamanho.desktop.subListas}; 
+    }
   `;
 
 export const Icon = styled.span`
