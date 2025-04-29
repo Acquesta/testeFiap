@@ -14,17 +14,14 @@ export const GlobalStyle = createGlobalStyle`
         width: 6px;
     }
 
-    /* Fundo da barra de rolagem */
     ::-webkit-scrollbar-track {
         background: ${cores.MAGENTA + '40'};
     }
 
-    /* "Botão" que você arrasta */
     ::-webkit-scrollbar-thumb {
         background: ${cores.MAGENTA};
     }
 
-    /* Quando passar o mouse no thumb */
     ::-webkit-scrollbar-thumb:hover {
         background: #555; 
     }

@@ -5,7 +5,7 @@ export const Button = styled.button`
   position: relative;
   width: 40px;
   height: 40px;
-  border: 2px solid ${cores.MAGENTA}; /* azul */
+  border: 2px solid ${cores.MAGENTA};
   border-radius: 50%;
   background: transparent;
   display: flex;

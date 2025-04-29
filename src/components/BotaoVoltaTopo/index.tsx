@@ -23,7 +23,7 @@ function BotaoVoltaTopo(){
 
   useEffect(() => {
     window.addEventListener("scroll", checkScroll);
-    checkScroll(); // Checa logo ao montar
+    checkScroll(); 
 
     return () => {
       window.removeEventListener("scroll", checkScroll);

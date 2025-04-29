@@ -47,7 +47,6 @@ function Accordion() {
       });
       setOpenIndex(null);
     } else {
-      // Fecha o item anterior
       if (previousId) {
         gsap.to(previousId, {
           height: 0,
@@ -58,7 +57,6 @@ function Accordion() {
         });
       }
 
-      // Abre o novo item
       const element = document.getElementById(`animacaoAccordion${index}`);
       if (element) {
         element.style.height = "0px";
