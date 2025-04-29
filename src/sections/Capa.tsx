@@ -24,7 +24,6 @@ const SectionCapa = styled.section<SectionCapaProps>`
     background-color: ${cores.BLACK};
 
     @media (min-width: 413px) {
-        height: 60vh;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -35,7 +34,7 @@ const SectionCapa = styled.section<SectionCapaProps>`
         url(${({background}) => background});
         background-position: center;
         background-size: cover;
-        padding-top: 100px;
+        padding: 100px 0 50px 0;
     }
 `
 

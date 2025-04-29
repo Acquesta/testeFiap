@@ -6,6 +6,11 @@ import { fontes } from "@/styles/fontes";
 import styled from "styled-components";
 import fiapNext from "@/assets/imgs/fiap-next.jpg"
 import Lista from "@/components/Lista";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 const SectionEducacaoETech = styled.section`
@@ -50,12 +55,27 @@ const DivConteudo = styled.div`
 
 
 function EducacaoETech() {
+
+    useGSAP(() => {
+        gsap.fromTo(
+            "#Capa",
+            { opacity: 0, y: 50 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "power2.out",
+              
+            }
+          );
+    })
+
     return ( 
         <SectionEducacaoETech id="Capa">
             <Titulo color={cores.CHINESE_BLACK} tipografia={fontes.tipografia.gotham} stroke='false'>
                 Educação e Tech
             </Titulo>
-            <DivConteudo>
+            <DivConteudo id="Conteudo">
                 <DivCursos>
                     <Paragrafo color={cores.DAVYS_GREY}>
                         A FIAP é muito mais do que uma faculdade de tecnologia, é um verdadeiro ecossistema de inovação e aprendizado. Conhecida por sua abordagem moderna e focada no mercado, a instituição é referência quando se trata de formar profissionais capacitados para os desafios do futuro. Seja na graduação, pós-graduação ou cursos livres, a FIAP entrega um ensino que mistura teoria e prática, preparando os alunos para atuar em empresas de ponta ou até mesmo empreender.
