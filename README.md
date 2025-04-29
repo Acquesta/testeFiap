@@ -17,7 +17,7 @@ Uma landing page moderna e responsiva desenvolvida com **Next.js**, **TypeScript
 
 ## 📸 Imagem do Projeto
 
-![Preview do Projeto](src/public/preview.PNG)
+![Preview do Projeto](public/preview.PNG)
 
 ---
 
