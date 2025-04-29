@@ -1,5 +1,3 @@
-
-md
 # 🌐 Projeto OnePage FIAP
 
 Uma landing page moderna e responsiva desenvolvida com **Next.js**, **TypeScript**, **Styled Components** e **GSAP** para animações. O projeto simula uma página institucional com foco em usabilidade, performance e experiência visual animada.
