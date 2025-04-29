@@ -1,6 +1,6 @@
 "use client"
 
-import ScrollTopButton from "@/components/BotaoVoltaTopo";
+import BotaoVoltaTopo from "@/components/BotaoVoltaTopo";
 import BreakImage from "@/sections/BreakImage";
 import Capa from "@/sections/Capa";
 import EducacaoETech from "@/sections/EducacaoETech";
@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <main className={`${gotham.className}, ${roboto.className}`}>
       <GlobalStyle />
-      <ScrollTopButton />
+      <BotaoVoltaTopo />
       <Header /> 
       <Capa />
       <EducacaoETech />

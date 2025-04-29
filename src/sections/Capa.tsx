@@ -43,6 +43,9 @@ const DivTitulo = styled.div`
         display: flex;
         flex-direction: column;
         gap: 20px;
+        padding-left:80px;
+    }
+    @media (min-width: 720px) {
         padding-left:129px;
     }
 `
@@ -66,10 +69,12 @@ const ParagrafoDiv = styled.div`
 
     @media (min-width: 413px) {
         background: none;
-        width: 40vw;
+        width: 60vw;
         padding: 0;
     }
-
+    @media (min-width: 720px) {
+        width: 40vw;
+    }
 `
 
 function Capa() {

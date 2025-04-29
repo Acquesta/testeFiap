@@ -16,7 +16,7 @@ export const Button = styled.button<{ $visivel: boolean }>`
   transition: opacity 0.3s ease;
   z-index: 10;
 
-  @media (min-width: 413px) {
+  @media (min-width: 720px) {
     bottom: 91px;
     right: 91px;
   }

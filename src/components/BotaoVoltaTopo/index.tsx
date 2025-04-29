@@ -1,4 +1,3 @@
-// ScrollTopButton.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -12,15 +11,24 @@ gsap.registerPlugin(ScrollToPlugin);
 function BotaoVoltaTopo(){
   const [isVisible, setIsVisible] = useState(false);
 
-  function scroll() {
+  function checkScroll() {
     const scrollTop = window.scrollY;
     const tamanhoTela = window.innerHeight;
     setIsVisible(scrollTop > tamanhoTela);
-  };
+  }
 
   function scrollToTop() {
     gsap.to(window, { duration: 1, scrollTo: { y: 0 }, ease: "power2.out" });
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkScroll);
+    checkScroll(); // Checa logo ao montar
+
+    return () => {
+      window.removeEventListener("scroll", checkScroll);
+    };
+  }, []);
 
 
   return (

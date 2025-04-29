@@ -15,8 +15,13 @@ const SectionEducacaoETech = styled.section`
     padding: 100px 24px 100px 24px;
 
     @media (min-width: 413px) {
+        padding : 179px 80px;
+    }
+
+    @media (min-width: 720px) {
         padding : 179px 129px;
     }
+
 `
 
 const DivCursos = styled.div`
