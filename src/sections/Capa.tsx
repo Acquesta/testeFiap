@@ -24,17 +24,18 @@ const SectionCapa = styled.section<SectionCapaProps>`
     background-color: ${cores.BLACK};
 
     @media (min-width: 413px) {
-        height: 80vh;
+        height: 60vh;
         display: flex;
         flex-direction: column;
         align-items: start;
-        justify-content: space-evenly;
-        gap:20px;
+        justify-content: center;
+        gap:60px;
         background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 80%),
         linear-gradient(to top, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0) 80%),
         url(${({background}) => background});
         background-position: center;
         background-size: cover;
+        padding-top: 100px;
     }
 `
 

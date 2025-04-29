@@ -6,6 +6,7 @@ interface ButtonProps{
 }
 
 export const DivBotao = styled.div<ButtonProps>`
+    position: static;
     display: none;
     margin:0 auto 0 auto;
     
@@ -13,7 +14,7 @@ export const DivBotao = styled.div<ButtonProps>`
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 40px;
     }
 `
 
